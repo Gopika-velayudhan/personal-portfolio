@@ -1,6 +1,5 @@
 *{
-    padding: 0;
-    margin: 0;
+
     box-sizing: border-box;
     
 }
@@ -14,7 +13,7 @@ navbar{
     cursor: pointer;
     text-decoration: none;
     float: right;
-    margin-top: 10px;
+    
 
 }
 .nav-link:hover{
@@ -94,7 +93,7 @@ h2{
 }
 .progress p{
     color: white;
-    padding: 10px;
+
 }
 .pro-value2{
     animation: load2 3s normal forwards;
@@ -199,9 +198,8 @@ h2{
     background-color: #313552;
 }
 .media_link{
-    padding: 1rem;
+    
     max-width: 15rem;
-    margin-left: 1rem;
     border: 2px solid #f5ba09;
     border-radius: 0.5rem;
 }
