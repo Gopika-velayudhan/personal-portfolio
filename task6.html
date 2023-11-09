@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>task6</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Bank Balance</h1>
+            <!-- <p>Current Balance:<span id="balance">0</span>rupees</p> -->
+            <input type="number" id="depositAm" placeholder="enter a deposite amount">
+            <button onclick="deposit()">Deposit</button><br><br>
+            <input type="number" id="withdrawAm" placeholder="enter a withdraw amount">
+            <button onclick="withdraw()">Withdraw</button>
+            <br><br>
+            <button onclick="show()">Show balance</button>
+            <p id="sh"></p>
+        </div>
+
+        <script>
+            let balance = 0;
+
+    function updateBalance() {
+        document.getElementById("balance").textContent = balance;
+}
+
+
+
+    function deposit() {
+            const depositAm = parseFloat(document.getElementById("depositAm").value);
+            if (depositAm > 0) {
+                 balance =balance + depositAm
+                 document.getElementById("sh").innerHTML="deposited amound is " + depositAm;
+                 
+                    
+    
+            }
+        }
+
+     function withdraw() {
+            const withdrawAm = parseFloat(document.getElementById("withdrawAm").value);
+            if (withdrawAm > 0 && withdrawAm <= balance) {
+                balance =  balance - withdrawAm;
+                document.getElementById("sh").innerHTML=" withdraw amound is " + withdrawAm;
+                
+            }
+            }
+        
+
+        function show() {
+          document.getElementById("sh").innerHTML="the current balance is" + balance;
+        }
+
+        </script>
+        
+    </body>
+</html>
